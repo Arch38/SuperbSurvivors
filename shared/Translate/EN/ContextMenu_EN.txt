@@ -182,5 +182,22 @@ ContextMenu_EN = {
 		ContextMenu_SS_ToggleGroupWindow = "Toggle Group Window"
 	--[[END debug]]--
 
+ContextMenu_SD_DoctorPrefix_Before = "Doctor ",
+	ContextMenu_SD_DoctorPrefix_After = "",
+	ContextMenu_SD_VeteranPrefix_Before = "Veteran ",
+	ContextMenu_SD_VeteranPrefix_After = "",
+	ContextMenu_SD_FarmerPrefix_Before = "Farmer ",
+	ContextMenu_SD_FarmerPrefix_After = "",
+
+ContextMenu_SD_RIPSurvivor = "R.I.P my friend",
+	ContextMenu_SD_DoctorDone = "Good as new! Take it easy now!",
+	ContextMenu_SD_DoctorSplint = "*Applying Splint...*",
+	ContextMenu_SD_DoctorBandageRemove = "*Removing Bandage...*",
+	ContextMenu_SD_DoctorStitches = "*Applying Stitches*",
+	ContextMenu_SD_DoctorGlass = "*Removing Glass...*",
+	ContextMenu_SD_DoctorBullet = "*Removing Bullet...*",
+	ContextMenu_SD_DoctorBandage = "*Applying Bandage...*",
+	ContextMenu_SD_HoldStill = "Hold still please...",
+
 }
 

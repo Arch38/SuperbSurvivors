@@ -239,7 +239,7 @@ SurvivorRandomSuits["Common"]["Basic1"] = {
 
 -- Presets, for use with the new Preset Spawns feature.
 SurvivorRandomSuits["Preset"]["Preset_Army"] = {
-  "Base.Hat_BeretArmy", 
+  "Base.Hat_Army", 
   "Base.Tshirt_ArmyGreen",
   "Base.Jacket_CoatArmy",
   "Base.Trousers_ArmyService",

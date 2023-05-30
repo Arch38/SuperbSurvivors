@@ -17,6 +17,7 @@ Orders = {
 	"Unlock Doors",
 	"Loot Room",
 	"Patrol",
+	"Sort Loot Into Base",
 	"Stand Ground",
 	"Stop",
 	"Dismiss",
@@ -191,4 +192,35 @@ function getMouseSquareX()
 	local sx = mapx + (mousex / (sw/2) + mousey / (sh/2)) /2;
 
 	return sx
+end
+
+function doesSquareHaveNPC(Square)
+
+		if(Square ~= nil) then
+		
+			local closeobjects = Square:getMovingObjects()
+			for i=0, closeobjects:size()-1 do
+				local obj = closeobjects:get(i)
+				if (obj ~= nil) then 
+					if (instanceof(obj,"IsoPlayer")) then
+						return true
+					end
+				end
+			end
+		end
+		
+		return false
+
+end
+
+function is_array(t)
+	if(not t) then return false end
+	if(t[0] or t[1]) then return true
+	else return false end
+  local i = 0
+  for _ in pairs(t) do
+      i = i + 1
+      if t[i] == nil then return false end
+  end
+  return true
 end

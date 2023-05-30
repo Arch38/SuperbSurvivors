@@ -245,7 +245,17 @@ UI_EN = {
 		UI_Option_SS_CallClosestNonGroupMember = "Call Closest Non-Group Member",
 		UI_Option_SS_AskClosestGroupMembertoFollow = "Ask Closest Group Member to Follow",
 		UI_Option_SS_WarningMSG = "Unsupported Mod Message: ",
-		UI_Option_SS_WarningMSGDesc = "WARNING: You are about to disable the mods that Superior Survivors mod can not handle. This warning system is new, so that players can know which mod to disable to make superior survivors work, instead of havnig to manually check every mod one by one. If you know of a mod that breaks superior survivors, pleaes report it to the discord or on the steam page to help the community! The warning message is there to disable the mod in question to make the NPC mod work. If you turn this option off, then you're on your own."
+		UI_Option_SS_WarningMSGDesc = "WARNING: You are about to disable the mods that Superior Survivors mod can not handle. This warning system is new, so that players can know which mod to disable to make superior survivors work, instead of havnig to manually check every mod one by one. If you know of a mod that breaks superior survivors, pleaes report it to the discord or on the steam page to help the community! The warning message is there to disable the mod in question to make the NPC mod work. If you turn this option off, then you're on your own.",
+		UI_Option_SS_ToggleGroupWindow = "Toggle Group Window"
+		UI_Option_SS_Open_Quest_Info_Window= "Open Quest Info Window",
+		UI_Option_SS_SShotkey1= "Hotkey for Action 1",
+		UI_Option_SS_SShotkey2= "Hotkey for Action 2",
+		UI_Option_SS_SShotkey3= "Hotkey for Action 3",
+		UI_Option_SS_SShotkey4= "Hotkey for Action 4",
+		UI_Option_SS_SpawnWildSurvivor= "Spawn Random Wild Survivor"
+		
+		
+		
 	--[[END debug]]--
 
 }

@@ -13,7 +13,7 @@ MeleWeapons = {
 -- "Base.GuitarAcoustic","Base.GuitarElectricBlack","Base.GuitarElectricBassBlue","Base.Flute",		-- Far too slow animations
 
 -- "Base.GardenFork","Base.WoodenLance",
--- "Base.SpearCrafted","Base.SpearCrafted","Base.SpearKnife","Base.SpearScissors","Base.SpearScrewdriver","Base.SpearHuntingKnife",		-- Spears freeze animation
+"Base.SpearCrafted","Base.SpearCrafted","Base.SpearKnife","Base.SpearScissors","Base.SpearScrewdriver","Base.SpearHuntingKnife",		-- Spears freeze animation
 
 "Base.Axe","Base.HandAxe","Base.WoodAxe","Base.Pickaxe","Base.AxeStone","Base.HandScythe",
 -- "Base.Stake",

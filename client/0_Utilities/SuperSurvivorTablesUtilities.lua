@@ -1,6 +1,6 @@
 -- this file only has methods related to deal with files
 
-local modid = "SuperiorSubparSurvivors"
+local modid = "SuperbSurvivors"
 
 --- DEBUG ---
 
@@ -107,16 +107,17 @@ function table.save( tbl,fileName )
 
 	debugMethodName("table.save")
 	debugMethodAction("saving file", fileName)
+	local themodID = modid
+	local thepath = getFileFullPath(fileName .. ".lua")
+	local writeFile = getModFileWriter(themodID,thepath , true, false)
 	
-	local writeFile = getModFileWriter(modid, getFileFullPath(fileName .. ".lua"), true, false)
-	
-	for i = 1,#tbl do
-		debugMethodAction("writing line", tostring(i))
-		writeFile:write(tbl[i].."\r\n");
-	end
-	
-	debugMethodAction("closing file", fileName)
-	writeFile:close();
+		for i = 1,#tbl do
+			debugMethodAction("writing line", tostring(i))
+			writeFile:write(tbl[i].."\r\n");
+		end
+		
+		debugMethodAction("closing file", fileName)
+		writeFile:close();
 
 	debugMethodName("table.save")
 end
