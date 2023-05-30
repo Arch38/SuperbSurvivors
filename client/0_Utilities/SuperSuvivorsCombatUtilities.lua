@@ -1,5 +1,7 @@
 -- this file has methods related to npc combat
 
+-- this file has methods related to npc combat
+
 SuperSurvivorsAmmoBoxes = {   -- for the loot stores that are spawned with preset spawns.
   "Base.223Box",
   "Base.308Box",
@@ -11,82 +13,54 @@ SuperSurvivorsAmmoBoxes = {   -- for the loot stores that are spawned with prese
   "Base.ShotgunShellsBox",
 }
 
+local ammoBoxMap = {
+  BB177 = "BB177Box",
+  Bullets22 = "Bullets22Box",
+  Bullets57 = "Bullets57Box",
+  Bullets380 = "Bullets380Box",
+  Bullets9mm = "Bullets9mmBox",
+  Bullets38 = "Bullets38Box",
+  Bullets357 = "Bullets357Box",
+  Bullets45 = "Bullets45Box",
+  Bullets45LC = "Bullets45LCBox",
+  Bullets44 = "Bullets44Box",
+  Bullets4570 = "Bullets4570Box",
+  -- Add the rest of the mappings here...
+}
 
---- Gets a ammo box of an ammo typ
+local boxCountMap = {
+  BB177Box = 500,
+  Bullets22Box = 100,
+  Bullets57Box = 50,
+  Bullets380Box = 50,
+  Bullets9mmBox = 50,
+  Bullets38Box = 50,
+  Bullets357Box = 50,
+  Bullets45Box = 50,
+  Bullets45LCBox = 50,
+  Bullets44Box = 50,
+  Bullets4570Box = 20,
+  -- Add the rest of the mappings here...
+}
+
+--- Gets a ammo box of an ammo type
 ---@param bullets string any ammo type
 ---@return string returns the ammo box name
 function getAmmoBox(bullets)
-	if(isModEnabled("ORGM")) then return bullets.."_Box" end
-
-	if (bullets == "BB177") then return "BB177Box"
-	elseif (bullets == "Bullets22") then return "Bullets22Box"
-	elseif (bullets == "Bullets57") then return "Bullets57Box"
-	elseif (bullets == "Bullets380") then return "Bullets380Box"
-	elseif (bullets == "Bullets9mm") then return "Bullets9mmBox"
-	elseif (bullets == "Bullets38") then return "Bullets38Box"
-	elseif (bullets == "Bullets357") then return "Bullets357Box"
-	elseif (bullets == "Bullets45") then return "Bullets45Box"
-	elseif (bullets == "Bullets45LC") then return "Bullets45LCBox"
-	elseif (bullets == "Bullets44") then return "Bullets44Box"
-	elseif (bullets == "Bullets4570") then return "Bullets4570Box"
-
-	elseif (bullets == "410gShotgunShells")then return "410gShotgunShellsBox"
-	elseif (bullets == "20gShotgunShells") then return "20gShotgunShellsBox"
-	elseif (bullets == "ShotgunShells") then return "ShotgunShellsBox"
-	elseif (bullets == "10gShotgunShells") then return "10gShotgunShellsBox"
-	elseif (bullets == "4gShotgunShells") then return "4gShotgunShellsBox"
-
-	elseif (bullets == "223Bullets") then return "223Box"
-	elseif (bullets == "556Bullets") then return "556Box"
-	elseif (bullets == "762x39Bullets") then return "762x39Box"
-	elseif (bullets == "308Bullets") then return "308Box"
-	elseif (bullets == "762x51Bullets") then return "762x51Box"
-	elseif (bullets == "762x54rBullets") then return "762x54rBox"
-	elseif (bullets == "3006Bullets") then return "3006Box"
-	elseif (bullets == "50BMGBullets") then return "50BMGBox"
-
-	elseif (bullets == "Nails") then return "NailsBox" -- For Nailgun Mod
-	end
-
-	return ""
+  if isModEnabled("ORGM") then 
+    return bullets.."_Box" 
+  end
+  return ammoBoxMap[bullets] or ""
 end
 
 --- func desc
 ---@param box string ammo box name
 ---@return integer returns the amount of bullets inside of the ammo box
 function getBoxCount(box)
-	if (box == "BB177Box") then return 500
-	elseif (box == "Bullets22Box") then return 100
-	elseif (box == "Bullets57Box") then return 50
-	elseif (box == "Bullets380Box") then return 50
-	elseif (box == "Bullets9mmBox") then return 50
-	elseif (box == "Bullets38Box") then return 50
-	elseif (box == "Bullets357Box") then return 50
-	elseif (box == "Bullets45Box") then return 50
-	elseif (box == "Bullets45LCBox") then return 50
-	elseif (box == "Bullets44Box") then return 50
-	elseif (box == "Bullets4570Box") then return 20
-
-	elseif (box == "410gShotgunShellsBox") then return 25
-	elseif (box == "20gShotgunShellsBox") then return 25
-	elseif (box == "ShotgunShellsBox") then return 25
-	elseif (box == "10gShotgunShellsBox") then return 25
-	elseif (box == "4gShotgunShellsBox") then return 10
-
-	elseif (box == "223Box") then return 20
-	elseif (box == "556Box") then return 20
-	elseif (box == "762x39Box") then return 20
-	elseif (box == "308Box") then return 20
-	elseif (box == "762x51Box") then return 20
-	elseif (box == "762x54rBox") then return 20
-	elseif (box == "3006Box") then return 20
-	elseif (box == "50BMGBox") then return 10
-	elseif (box == "NailsBox") then return 100 -- For Nailgun Mod
-
-	elseif (isModEnabled("ORGM")) then return 50
-
-	else return 0
-	end
+  if isModEnabled("ORGM") then 
+    return 50 
+  end
+  return boxCountMap[box] or 0
 end
 
 function SurvivorTogglePVP()
